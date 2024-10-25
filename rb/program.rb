@@ -3,9 +3,9 @@ require_relative 'parser'
 
 class Program
   def self.run
-    parser = Parser.new ref_date
     ref_date = Readline.readline("Ref Date> ", true)
     count = Readline.readline("Count> ", true).to_i
+    parser = Parser.new ref_date
     trades = []
 
     count.times do
